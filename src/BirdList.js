@@ -5,7 +5,7 @@ function BirdList({birds, name, image} ){
 
 
   return (
-    <div className= "blog-list">
+    <div className= "bird-list">
       <h2>{name}</h2>
        {birds.map((bird)=>
         <div className="bird-preview" key={bird.id}>

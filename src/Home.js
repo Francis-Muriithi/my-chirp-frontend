@@ -1,8 +1,16 @@
-import React from 'react'
+import BirdList from './BirdList'
+import useFetch from './useFetch'
 
 function Home() {
+const {data: birds, isLoading, error} = useFetch('http://localhost:8000/birds')
+
+
   return (
-    <div>Home Component</div>
+    <div className="home">
+    {error && <div>{error}</div>}
+    {isLoading && <div> Loading...</div>}
+    {birds && <BirdList birds={birds} title= "All Bird!"/> }
+    </div>
   )
 }
 

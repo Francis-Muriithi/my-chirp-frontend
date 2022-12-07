@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 
 function BirdDetails() {
     const {id} = useParams();
-    const {data:blog, error, isLoading} = useFetch('http://localhost:8000/birds/'+ id);
+    const {data:bird, error, isLoading} = useFetch('http://localhost:8000/birds/'+ id);
     const history = useHistory()
 
 function handleDelete(){
@@ -33,7 +33,7 @@ function handleDelete(){
      <button className = 'delete' onClick={(handleDelete)}>Delete</button>
      </div>
      <button className = "update" style={{color: "White", backgroundColor: "#acb4d0", borderRadius: "8px",}}>
-     <Link to={"/update/" + blog.id}>
+     <Link to={"/update/" + bird.id}>
      <span className = "update">Update</span>
      </Link>
      </button>

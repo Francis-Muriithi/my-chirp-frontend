@@ -37,3 +37,118 @@
   margin: 40px auto;
   padding: 20px;
 }
+
+
+/* Bird preview list */
+.bird-preview{
+  padding: 10px 16px;
+  margin:20px 0;
+  border-bottom: 1px solid #da7f7f
+}
+.bird-preview:hover{
+  box-shadow: 1px 3px 5px rgb(132, 34, 34)
+}
+
+.bird-preview h2{
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 8px;
+}
+.bird-preview a{
+  text-decoration: none;
+}
+
+/* Blog Details page */
+
+/* .bird-details h2{
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 10px;
+}
+.bird-details div{
+  margin:20px 0;
+}
+
+.bird-details button{
+  background: #f1356d;
+  color:antiquewhite;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor:pointer;
+  text-decoration: none;
+} */
+.update{
+  text-decoration: none;
+}
+/* Bird Form */
+.create{
+  max-width: 400px;
+  margin: 0, auto;
+  text-align: center;
+}
+
+.create label{
+  text-align: left;
+  display: block;
+}
+
+.create h2{
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+
+.create input, .create textarea, .create select{
+  width: 500px;
+  padding: 6px, 10px;
+  margin: 10px, 0;
+  border: 1px, solid, #ddd;
+  box-sizing: border-box;
+  display:block;
+}
+
+.create button{
+  background: #f1356d;
+  color:#f2f2f2;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor:pointer;
+}
+
+/* Update Form */
+.update {
+  max-width: 400px;
+  margin: 0, auto;
+  text-align: center;
+}
+
+.update label{
+  text-align: left;
+  display: block;
+}
+
+.update h2{
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+
+.update input, .update  textarea, .update select{
+  width: 500px;
+  padding: 6px, 10px;
+  margin: 10px, 0;
+  border: 1px, solid, rgb(110, 151, 177);
+  box-sizing: border-box;
+  display:block;
+}
+
+.update button{
+  background: #f1356d;
+  color:#f2f2f2;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor:pointer;
+}
