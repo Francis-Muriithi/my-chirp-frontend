@@ -14,7 +14,7 @@ function Update() {
     }, [])
 
     const getBirdDetails = async()=>{
-        let result = await fetch(`http://localhost:8000/birds/${params.id}`);
+        let result = await fetch(`http://localhost:3000/birds/${params.id}`);
         result = await result.json();
         console.warn(result)
         setName(result.name)
@@ -25,7 +25,7 @@ function Update() {
 
     const updateBird = async()=>{
         console.warn(name, image, description, adventure)
-        let result = await fetch(`http://localhost:8000/birds/${params.id}`, {
+        let result = await fetch(`http://localhost:3000/birds/${params.id}`, {
             method: 'PUT',
             body: JSON.stringify({name, image, description, adventure}),
             headers: {'Content-type': 'Application/json'},

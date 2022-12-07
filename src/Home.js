@@ -2,7 +2,7 @@ import BirdList from './BirdList'
 import useFetch from './useFetch'
 
 function Home() {
-const {data: birds, isLoading, error} = useFetch('http://localhost:8000/birds')
+const {data: birds, isLoading, error} = useFetch('http://localhost:3000/birds')
 
 
   return (

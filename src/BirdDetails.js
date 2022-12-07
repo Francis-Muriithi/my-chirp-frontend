@@ -6,11 +6,11 @@ import {Link} from 'react-router-dom'
 
 function BirdDetails() {
     const {id} = useParams();
-    const {data:bird, error, isLoading} = useFetch('http://localhost:8000/birds/'+ id);
+    const {data:bird, error, isLoading} = useFetch('http://localhost:3000/birds/'+ id);
     const history = useHistory()
 
 function handleDelete(){
-    fetch('http://localhost:8000/birds/' + bird.id, {
+    fetch('http://localhost:3000/birds/' + bird.id, {
         method: 'DELETE'
     }).then(()=> {
         history.push('/')
