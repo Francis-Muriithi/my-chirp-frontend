@@ -60,7 +60,7 @@
 
 /* Blog Details page */
 
-/* .bird-details h2{
+.bird-details h2{
   font-size: 20px;
   color: #f1356d;
   margin-bottom: 10px;
@@ -77,7 +77,7 @@
   border-radius: 8px;
   cursor:pointer;
   text-decoration: none;
-} */
+}
 .update{
   text-decoration: none;
 }
