@@ -5,15 +5,16 @@ function Create() {
   const [name, setName] =useState('')
     const [image, setImage] = useState('')
     const [description, setDescription] = useState('')
-    const [adventure, setAdventure] = useState( );
+    const [adventureLocation, setAdventureLocation] = useState( );
+    const [adventureTitle, setAdventureTitle] = useState( );
     const history = useHistory()
     const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e)=>{
     e.preventDefault();
-    const bird = {name, image, description, adventure}
+    const bird = {name, image, description, adventureTitle, adventureLocation}
 
-fetch('http://localhost:3000/birds', {
+fetch('https://6389cd9e4eccb986e89ae6f9.mockapi.io/Birds', {
 method: 'POST',
 headers: {'Content-Type': "application/json"},
 body: JSON.stringify(bird)
@@ -34,8 +35,10 @@ history.push('/')
             <input required value={image} onChange={(e)=> setImage(e.target.value)}/>
             <label> Bird's Description</label>
             <textarea required value= {description} onChange={(e)=> setDescription(e.target.value)}/>
-            <label>Adventure</label>
-            <input type="text" required  value={adventure} onChange={(e)=> setAdventure(e.target.value)}/>
+            <label>Adventure Title</label>
+            <input type="text" required  value={adventureTitle} onChange={(e)=> setAdventureTitle(e.target.value)}/>
+            <label>Adventure Location</label>
+            <input type="text" required  value={adventureLocation} onChange={(e)=> setAdventureLocation(e.target.value)}/>
             {!isLoading && <button>Add Bird</button>}
             {isLoading && <button disabled>Adding bird....</button>}
         </form>

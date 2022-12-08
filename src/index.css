@@ -4,8 +4,9 @@
 * {
   margin: 0;
   font-family: "Quicksand";
-  color: #333;
-  background-color: aquamarine;
+  color: rgb(55, 43, 43);
+  font-weight: 600;
+  background-color: rgb(182, 230, 215);
 }
 /* NavBar Styling */
 .navbar {
@@ -65,6 +66,7 @@
   color: #f1356d;
   margin-bottom: 10px;
 }
+
 .bird-details div{
   margin:20px 0;
 }
@@ -145,8 +147,8 @@
 }
 
 .update button{
-  background: #f1356d;
-  color:#f2f2f2;
+  background: #c91349;
+  color:#efe4e4;
   border: 0;
   padding: 8px;
   border-radius: 8px;

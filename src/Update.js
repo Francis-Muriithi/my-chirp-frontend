@@ -5,7 +5,6 @@ function Update() {
     const [name, setName] =useState('')
     const [image, setImage] = useState('')
     const [description, setDescription] = useState('')
-    const [adventure, setAdventure] = useState( );
     const params = useParams()
     const history = useHistory()
     
@@ -14,20 +13,19 @@ function Update() {
     }, [])
 
     const getBirdDetails = async()=>{
-        let result = await fetch(`http://localhost:3000/birds/${params.id}`);
+        let result = await fetch(`https://6389cd9e4eccb986e89ae6f9.mockapi.io/Birds/${params.id}`);
         result = await result.json();
         console.warn(result)
         setName(result.name)
         setImage(result.image)
         setDescription(result.description)
-        setAdventure(result.adventure)
     }
 
     const updateBird = async()=>{
-        console.warn(name, image, description, adventure)
-        let result = await fetch(`http://localhost:3000/birds/${params.id}`, {
+        console.warn(name, image, description)
+        let result = await fetch(`https://6389cd9e4eccb986e89ae6f9.mockapi.io/Birds/${params.id}`, {
             method: 'PUT',
-            body: JSON.stringify({name, image, description, adventure}),
+            body: JSON.stringify({name, image, description}),
             headers: {'Content-type': 'Application/json'},
         });  
     }
@@ -42,8 +40,6 @@ function Update() {
             <input required value={image} onChange={(e)=> setImage(e.target.value)}/>
             <label> Bird's Description</label>
             <textarea required value= {description} onChange={(e)=> setDescription(e.target.value)}/>
-            <label>Adventure</label>
-            <input type="text" required  value={adventure} onChange={(e)=> setAdventure(e.target.value)}/>
             <button onClick ={updateBird}>Update Bird</button>
         </form>
     </div>
