@@ -27,8 +27,7 @@ function handleDelete(){
          <h2>{bird.name}</h2>
          <img src={bird.image} alt= "bird" key={bird.id}></img>
          <div>{bird.description}</div>
-         <h3> Adventure: {bird.adventure.title}</h3>
-         <h3> Location: {bird.adventure.location}</h3>
+         <h3> Adventure: {bird.adventure}</h3>
          <div className="links">
      </div>
      <div>

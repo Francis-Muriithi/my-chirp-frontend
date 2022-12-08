@@ -4,6 +4,7 @@ import {useParams, useHistory} from 'react-router-dom';
 function Update() {
     const [name, setName] =useState('')
     const [image, setImage] = useState('')
+    const [adventure, setAdventure] =useState('')
     const [description, setDescription] = useState('')
     const params = useParams()
     const history = useHistory()
@@ -19,6 +20,7 @@ function Update() {
         setName(result.name)
         setImage(result.image)
         setDescription(result.description)
+        setAdventure(result.adventure)
     }
 
     const updateBird = async()=>{
@@ -40,6 +42,8 @@ function Update() {
             <input required value={image} onChange={(e)=> setImage(e.target.value)}/>
             <label> Bird's Description</label>
             <textarea required value= {description} onChange={(e)=> setDescription(e.target.value)}/>
+            <label> Adventure</label>
+            <input required value= {adventure} onChange={(e)=> setAdventure(e.target.value)}/>
             <button onClick ={updateBird}>Update Bird</button>
         </form>
     </div>
