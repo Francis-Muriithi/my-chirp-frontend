@@ -2,11 +2,11 @@
 
 /* Base Stuling */
 * {
-  margin: 0;
+  margin: 20;
   font-family: "Quicksand";
   color: rgb(55, 43, 43);
   font-weight: 600;
-  background-color: rgb(182, 230, 215);
+  background-color: rgb(242, 246, 245);
 }
 /* NavBar Styling */
 .navbar {
