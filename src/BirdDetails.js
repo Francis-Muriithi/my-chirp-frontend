@@ -6,11 +6,11 @@ import {Link} from 'react-router-dom'
 
 function BirdDetails() {
     const {id} = useParams();
-    const {data:bird, error, isLoading} = useFetch('https://6389cd9e4eccb986e89ae6f9.mockapi.io/Birds/'+ id);
+    const {data:bird, error, isLoading} = useFetch('http://localhost:3000/birds/'+ id);
     const history = useHistory()
 
 function handleDelete(){
-    fetch('https://6389cd9e4eccb986e89ae6f9.mockapi.io/Birds/' + bird.id, {
+    fetch('http://localhost:3000/birds/' + bird.id, {
         method: 'DELETE'
     }).then(()=> {
         history.push('/')

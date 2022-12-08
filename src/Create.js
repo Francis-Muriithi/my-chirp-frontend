@@ -14,7 +14,7 @@ function Create() {
     e.preventDefault();
     const bird = {name, image, description, adventure}
 
-fetch('https://6389cd9e4eccb986e89ae6f9.mockapi.io/Birds', {
+fetch('http://localhost:3000/birds', {
 method: 'POST',
 headers: {'Content-Type': "application/json"},
 body: JSON.stringify(bird)
