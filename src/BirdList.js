@@ -12,7 +12,6 @@ function BirdList({birds, name, image} ){
           <Link to ={`/birds/${bird.id}`} >
             <img src={bird.image} alt="bird" />
             <h2> Name: {bird.name}</h2>
-            <p> Adventure: {bird.adventure}</p>
             </Link>
         </div>
         )}

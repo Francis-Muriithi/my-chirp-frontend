@@ -6,11 +6,11 @@ import {Link} from 'react-router-dom'
 
 function BirdDetails() {
     const {id} = useParams();
-    const {data:bird, error, isLoading} = useFetch('https://chirplog.herokuapp.com/birds'+ id);
+    const {data:bird, error, isLoading} = useFetch('https://chirplog.herokuapp.com/birds/'+ id);
     const history = useHistory()
 
 function handleDelete(){
-    fetch('https://chirplog.herokuapp.com/birds' + bird.id, {
+    fetch('https://chirplog.herokuapp.com/birds/' + bird.id, {
         method: 'DELETE'
     }).then(()=> {
         history.push('/')
@@ -27,7 +27,7 @@ function handleDelete(){
          <h2>{bird.name}</h2>
          <img src={bird.image} alt= "bird" key={bird.id}></img>
          <div>{bird.description}</div>
-         <h3> Adventure: {bird.adventure}</h3>
+         <h3> Adventure: {bird.adventure_id}</h3>
          <div className="links">
      </div>
      <div>
