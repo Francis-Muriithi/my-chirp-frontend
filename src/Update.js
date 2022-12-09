@@ -14,7 +14,7 @@ function Update() {
     }, [])
 
     const getBirdDetails = async()=>{
-        let result = await fetch(`http://localhost:3000/birds/${params.id}`);
+        let result = await fetch(`https://chirplog.herokuapp.com/birds/${params.id}`);
         result = await result.json();
         console.warn(result)
         setName(result.name)
@@ -25,7 +25,7 @@ function Update() {
 
     const updateBird = async()=>{
         console.warn(name, image, description)
-        let result = await fetch(`http://localhost:3000/birds/${params.id}`, {
+        let result = await fetch(`https://chirplog.herokuapp.com/birds/${params.id}`, {
             method: 'PUT',
             body: JSON.stringify({name, image, description}),
             headers: {'Content-type': 'Application/json'},

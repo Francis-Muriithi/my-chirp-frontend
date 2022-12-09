@@ -2,7 +2,7 @@ import BirdList from './BirdList'
 import useFetch from './useFetch'
 
 function Home() {
-const {data: birds, isLoading, error} = useFetch('https://6389cd9e4eccb986e89ae6f9.mockapi.io/Birds')
+const {data: birds, isLoading, error} = useFetch('https://chirplog.herokuapp.com/birds')
 
 
   return (
