@@ -5,16 +5,16 @@ function Create() {
   const [name, setName] =useState('')
     const [image, setImage] = useState('')
     const [description, setDescription] = useState('')
-    const [adventure, setAdventure] = useState( );
+    const [adventure_id, setAdventure] = useState( );
     // const [adventureTitle, setAdventureTitle] = useState( );
     const history = useHistory()
     const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e)=>{
     e.preventDefault();
-    const bird = {name, image, description, adventure}
+    const bird = {name, image, description, adventure_id}
 
-fetch('http://localhost:3000/birds/', {
+fetch('https://chirplog.herokuapp.com/birds/', {
 method: 'POST',
 headers: {'Content-Type': "application/json"},
 body: JSON.stringify(bird)
@@ -36,7 +36,7 @@ history.push('/')
             <label> Bird's Description</label>
             <textarea required value= {description} onChange={(e)=> setDescription(e.target.value)}/>
             <label>Adventure Title</label>
-            <input type="text" required  value={adventure} onChange={(e)=> setAdventure(e.target.value)}/>
+            <input type="text" required  value={adventure_id} onChange={(e)=> setAdventure(e.target.value)}/>
             {!isLoading && <button>Add Bird</button>}
             {isLoading && <button disabled>Adding bird....</button>}
         </form>
