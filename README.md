@@ -10,9 +10,13 @@ For reproduction, you can clone this repository and run npm install to get acces
 # Technologies/Features
     React JS
     CSS
+    JSX
     Ruby on Rails
     Figma
-# 
+# Useful Links
+My-chirp front end   https://peaceful-tiramisu-2cd0ce.netlify.app/
+chirplog back-end    https://chirplog.herokuapp.com/birds 
+
 # Copyright and License (MIT)
 Copyright (c) 2022 Francis Muriithi
 
